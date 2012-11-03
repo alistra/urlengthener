@@ -1,0 +1,17 @@
+<center>
+<h1>Submit a link for enlengthement</h1>
+{% if error_message %}
+	<p>
+		<strong>
+			{{ error_message }}
+		</strong>
+	</p>
+{% endif %}
+
+<form action="/" method="post">
+	{% csrf_token %}
+	<input type="text" name="url" />
+	<br />
+	<input type="submit" value="Enlengthen" />
+</form>
+</center>
